@@ -24,6 +24,14 @@ import java.util.List;
  */
 @Slf4j
 @RestControllerAdvice
+/**
+ * 注解@RestControllerAdvice是一个@RestController的辅助类，最常用的就是作为全局异常处理的切面
+ * 可以指定扫描范围 @ControllerAdvice(basePackages="com.demo.controller")
+ * 约定了几种返回值
+ *  String 跳转到某个view
+ *  ModelAndView
+ *  model+@ResponBody 返回json字符串
+ * */
 public class RestExceptionHandler {
 
     /**
